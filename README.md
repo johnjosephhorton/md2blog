@@ -17,7 +17,7 @@ To use as a stand-alone script
 
 Modify you .bash_rc: 
 
-> export PATH=$PATH:~/<directory of md2blog> 
+> export PATH=$PATH:~/directory_of_md2blog 
 
 Then you can run: 
 
