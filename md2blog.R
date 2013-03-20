@@ -27,6 +27,8 @@ r_syntax_js <- get.resource("r_syntax.js" )
 twitter_code <- get.resource("twitter.snippet")
 google_plus_code <- get.resource("google_plus.snippet")
 sharing_code <- get.resource("sharing_buttons.html")
+ga_tracking <- get.resource("ga_tracking.snippet")
+
 end_header <- "</head><body>"
 
 #fragment <- renderMarkdown(md_name, renderer = 'HTML', renderer.options = getOption('markdown.HTML.options'))
@@ -44,8 +46,9 @@ html <- paste(header,
               r_syntax_css,
               r_syntax_js,
               twitter_code,
+              ga_tracking, 
               end_header,
-                fragment,
+              fragment,
               sharing_code, 
               disqus_code,
               google_plus_code,
