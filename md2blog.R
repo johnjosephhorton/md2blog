@@ -1,8 +1,17 @@
-#! /usr/bin/Rscript --vanilla --default-packages=utils
+#! /usr/bin/Rscript 
 library(knitr)
 library(markdown)
 
-resource_dir <- "/home/john/Dropbox/symlinks/md2blog/"
+initial.options <- commandArgs(trailingOnly = FALSE)
+file.arg.name <- "--file="
+script.name <- sub(file.arg.name, "", initial.options[grep(file.arg.name, initial.options)])
+script.basename <- dirname(script.name)
+other.name <- paste(sep="/", script.basename, "other.R")
+
+#print(script.name)
+#print(script.basename)
+
+resource_dir <- paste(script.basename, "/", sep="")
 
 args <- commandArgs(TRUE)
 rmd_name <- args[[1]]
